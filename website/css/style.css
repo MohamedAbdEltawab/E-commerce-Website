@@ -1,0 +1,792 @@
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 14px;
+	background: #FFF;
+}
+a:hover{
+	text-decoration: none;
+}
+/* ================== Start Header ====================*/
+.top
+{
+
+height: 90px;
+
+width:100%;
+
+margin-left:0;
+position: relative;
+}
+
+.top img{
+	width: 90px;
+ 	height: 90px;
+ 	margin-top:-57px;
+}
+
+
+.Search
+{
+	display: inline-block;
+	margin-left: 245px;
+	height: 80px;
+	padding: 19px;
+}
+.input-group
+{
+	width:500px;
+
+}
+.form-control
+{
+	height: 40px;
+	border-radius: 0;
+}
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group
+{
+	border-radius: 0;
+	height: 35px;
+	width:75px;
+	z-index: 3;
+	margin-left: -79px;
+	margin-top: 1px;
+	background: orange;
+	border: none;
+}
+.input-group .form-control{
+	padding: 20px;
+}
+
+
+.cart
+{
+	float: right;
+	margin-top:20px;
+	font-size: 25px;
+	width: 158px;
+	margin-right: 40px;
+	border: 1px solid #eee;
+}
+.cart .glyphicon
+{
+	
+font-size: 23px;
+	
+margin-left: 11px;
+	
+margin-right: 10px;
+	
+color: #826764;
+}
+.cart .counter
+{
+	
+font-size: 20px;
+	
+padding: 6px;
+	
+background: red;
+	
+border-radius: 50px;
+	
+color: #FFF;
+	
+margin-right: 10px;
+	
+width: 20px;
+height: 20px;
+}
+.cart .item
+{
+	font-size: 20px; 
+}
+.cart a
+{
+	font-size: 20px;
+	color: #826764;
+	font-family: cursive;
+	line-height: 0;
+	
+}
+.user
+{
+	width: 110px;
+	float: right;
+	line-height: 80px;
+	display: inline;
+	color: #826764;
+}
+.user a {
+	color: #826764;
+}
+@media(min-width: 420px) and (max-width: 726px){
+		.top{
+		height:140px
+	}
+	.cart{
+		margin-top:0;
+		margin-bottom:10px
+		margin-left:11115px
+	}
+	.user{
+		line-height:0;
+		margin-top:15px;
+		margin-right:70px
+
+	}
+	.Search{
+		margin-left:10px
+	}
+	.input-group{
+		width:350px
+	}
+}
+@media(min-width: 727px) and (max-width: 766px){
+	.top{
+		height:140px
+	}
+	.cart{
+		margin-top:0;
+		margin-bottom:10px
+		margin-left:11115px
+	}
+	.user{
+		line-height:0;
+		margin-top:30px;
+		margin-right:60px
+
+	}
+	.Search{
+		margin-left:150px
+	}
+	.input-group{
+		width:350px
+	}
+}
+
+@media(min-width: 767px) and (max-width: 992px){
+	.Search{
+		margin-left:50px
+	}
+	.input-group{
+		width:350px
+	}
+}
+@media(min-width: 993px) and (max-width: 1200px){
+	.Search{
+		margin-left:129px;
+	}
+}
+@media(min-width: 1201px) and (max-width:1245px){
+.Search{
+	margin-left:315px;
+}
+}
+/* ================== End Header ====================*/
+
+/*===================  Start Navbar ====================*/
+.navbar
+{
+	border-radius:0;
+	margin-bottom:0;
+	background: orange;
+}
+.navbar-inverse{
+	border:none;
+}
+.navbar-inverse .navbar-nav>li>a
+{
+	font-size: 16px;
+	font-family: 'Arimo', sans-serif;
+	color:rgba(128, 103, 103, 0.98);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	transition: box-shadow .3s ease-in-out;
+
+}
+
+.navbar-inverse .navbar-nav>li>a:hover{
+	
+	box-shadow: -3px -1px 1px #DDD;
+	border-radius: 5px;
+	font-family: 'Arimo', sans-serif;
+	
+
+}
+.navbar-nav>li>.dropdown-menu{
+	border-top-left-radius:25px;
+	width:240px;
+	background: rgba(2, 71, 156, 0.65);
+	color: #FFF;
+}
+.dropdown-menu
+{
+	padding: 10px;
+	width:200px;
+}
+
+.dropdown-menu>li>a
+{
+	line-height: 1.8;
+	font-family: tahoma;
+	font-size: 16px;
+	color: #ddd;
+	-webkit-transition: padding .5s ease-in-out;
+	-moz-transition: padding .5s ease-in-out;
+	-o-transition: padding .5s ease-in-out;
+	transition: padding .5s ease-in-out;
+}
+.dropdown-menu>li>a:hover
+{
+	padding-left: 25px;
+	background: rgba(255, 165, 0, 0.67);
+	color:#fff;
+	border-radius: 5px;
+}
+
+.account.dropdown-menu{
+	width: 50px;
+	padding: 0;
+}
+.dropdown-menu .out{
+	width: 50px;
+	padding: 0;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 44px;
+    margin-left: 44px;
+}
+.navbar-inverse .navbar-nav>.active>a
+{
+	background: inherit;;
+	color:rgba(128, 103, 103, 0.98);
+}
+.navbar-inverse .navbar-nav>.active>a:hover
+{
+	background: #ffa500;
+	padding: 15px 10px 15px 10px;
+	border-radius: 5px;
+	box-shadow: -3px -1px 1px #DDD;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+	background: inherit;
+}
+.navbar-inverse .username li
+{
+	list-style: none;
+
+}
+.navbar-inverse .username .dropdown a{
+	color: #936863;
+	font-size: 16px;
+	line-height: 50px;
+	font-family: 'Arimo', sans-serif;
+}
+.navbar-inverse .username .dropdown .dropdown-menu a{
+	color:black;
+	line-height: 16px;
+	width: 144px;
+	height: 29px;
+}
+#drop{
+	margin-top: -2px;
+	width:100px;
+	height: 44px;
+	padding: 5px;
+}
+.navbar-inverse .username .dropdown .dropdown-menu a{
+	line-height: 11px;
+	padding: 5px;
+}
+.navbar-inverse .username .dropdown .dropdown-menu a:hover{
+	line-height: 11px;
+	color: #826764;
+}
+
+.navbar-inverse .username a:hover {
+
+text-decoration: none;
+
+background: inherit;
+
+padding: 15px 10px 15px 10px;
+
+border-radius: 5px;
+
+font-size: 16px;
+}
+/*==================== End Navbar  =======================*/
+/*==================== Start Carousel ====================*/
+.carousel{
+	background: #FFF
+}
+.carousel-control{
+	position: absolute;
+	top: 130px;
+	bottom: 232px;
+}
+/*==================== End Carousel   ====================*/
+/*==================== Start Top Seller ==================*/
+.product_head h2{
+	background:rgba(204, 204, 204, 0.24);
+	padding: 10px;
+}
+.block{
+	margin-top: 20px;
+	background: #fff;
+	color: #fff;
+	width: 237px;
+	height: 330px;
+	margin: 22px;
+	display: inline-block;
+	padding: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-o-border-radius:10px;
+	border-radius: 10px;
+	outline: none !important;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	-ms-transition: 0.3s;
+	transition: 0.3s;
+	-webkit-box-shadow: 6px 8px 10px 2px rgba(46,61,73,0.2);
+	-moz-box-shadow: 6px 8px 10px 2px rgba(46,61,73,0.2);
+	-ms-box-shadow: 6px 8px 10px 2px rgba(46,61,73,0.2);
+	box-shadow: 6px 8px 10px 2px rgba(46,61,73,0.2);
+}
+.block:hover{
+	
+	-webkit-box-shadow: 3px 2px 1px 0 rgba(0,0,0,0.2);
+	-moz-box-shadow: 3px 2px 1px 0 rgba(0,0,0,0.2);
+	-o-box-shadow: 3px 2px 1px 0 rgba(0,0,0,0.2);
+	-ms-box-shadow: 3px 2px 1px 0 rgba(0,0,0,0.2);
+  	box-shadow: 3px 2px 1px 0 rgba(0,0,0,0.2);
+}
+.block .image{
+	overflow: hidden;
+}
+.block img{
+	width: 217px;
+	height: 200px;
+	transition: all .5s ease-in-out;
+}
+.block img:hover{
+	transform: scale(1.1);
+}
+.block p{
+	margin: 5px 1px 3px 1px;
+	text-align: center;
+	background: rgba(130, 103, 100, 0.54);
+	color: #fff;
+	width: 215px;
+	height: 45px;
+	font-family: tahoma;
+}
+.block .price{
+	text-align: center;
+	padding: 0 0 3px 0;
+	color: #000;
+}
+.block button
+{
+	width: 100%;
+	margin-bottom: 28px;
+}
+/*==================== End Top Seller =================*/
+/*======= =======*/
+
+.card{
+	width:250px;
+	height: 330px;
+	margin:16px;
+	display: inline-block;
+	border:1px solid 1px rgba(204, 204, 204, 0.18);
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	-ms-transition: 0.3s;
+	transition: 0.3s;
+	-webkit-box-shadow: 9px 5px 3px 3px rgba(46,61,73,0.2);
+	-moz-box-shadow: 9px 5px 3px 3px rgba(46,61,73,0.2);
+	-o-box-shadow: 9px 5px 3px 3px rgba(46,61,73,0.2);
+	box-shadow: 9px 5px 3px 3px rgba(46,61,73,0.2);	
+	
+	
+}
+.card:hover{
+	
+	-webkit-box-shadow: 3px 2px 1px 0 rgba(0,0,0,0.2);
+	-moz-box-shadow: 3px 2px 1px 0 rgba(0,0,0,0.2);
+	-o-box-shadow: 3px 2px 1px 0 rgba(0,0,0,0.2);
+	-ms-box-shadow: 3px 2px 1px 0 rgba(0,0,0,0.2);
+  	box-shadow: 3px 2px 1px 0 rgba(0,0,0,0.2);
+}
+.card span{
+	position: absolute;
+	background: orange;
+	color: #FFF;
+	padding: 5px;
+	-webkit-box-shadow: 0px 3px 2px 1px rgba(255, 165, 0, 0.38);
+	-moz-box-shadow: 0px 3px 2px 1px rgba(255, 165, 0, 0.38);
+	-ms-box-shadow: 0px 3px 2px 1px rgba(255, 165, 0, 0.38);
+	box-shadow: 0px 3px 2px 1px rgba(255, 165, 0, 0.38);
+}
+.card img{
+	width: 100%;
+	height: 235px;
+
+}
+.card p{
+	text-align: center;
+	background: #FFF;
+	margin: 0;
+	padding: 2px;
+	height: 50px;
+}
+.card button{
+	width: 100%;
+	border-radius: 0;
+	height: 44px
+
+}
+
+/*======= =======*/
+
+/*==================== Start About   =================*/
+.about h1{
+	
+text-align: center;
+	
+font-family: inherit;
+}
+.about{
+	margin-top: 30px;
+	height: 300px;
+	padding: 30px;
+	background: url(../image/keyboard.jpg) 50% 0 repeat fixed;
+	background-size: cover;
+	min-height: 400px;
+	text-align: center;
+	font-size: 25px;
+	color: #000;
+	font-family: sans-serif;
+	
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+/*==================== End About    =========================================*/
+
+/*==================== Start Brands =========================================*/
+.brands{
+	background:#FFF;
+	height: 400px;
+	padding-top: 60px;
+	padding-bottom: 30px;
+}
+
+/*==================== End Brands    ========================================*/
+
+/*==================== Start Contact ========================================*/
+.contact
+{
+	
+	height: 400px;
+	background: url(../image/us.jpg) 50% 0 no-repeat fixed;
+	padding: 30px;
+	background-size: cover;
+}
+form{
+	display: inline-block;
+}
+.form-group input{
+	width: 250px;
+	padding: 10px;
+	/* background: transparent; */
+	border-color: #0d2d54;
+}
+.form-group textarea{
+	width: 400px;
+	min-height: 130px;
+	resize: none;
+	padding-left: 15px;
+	background: transparent;
+	color: #000;
+	border-color: #000;
+}
+.form-group input[type='submit']{
+	width:200px;
+	height: 40px;
+	border-radius: 0;
+	border-color: #000;
+	color:#000;
+	font-size: 16px;
+}
+.address{
+	width:50%;
+	display: inline-block;
+	float: right;
+	color: #000;
+}
+
+/*==================== End Contact   =======================================*/
+
+/*==================== Start Footer   =======================================*/
+.footer{
+
+background: rgba(3, 35, 76, 0.95);
+
+height: 100px;
+
+width:100%;
+
+color:#ddd;
+}
+.copy-right{
+	
+	padding-top:70px;
+	padding-left: 70px;
+	display:inline-block;
+	width:50%;
+}
+.social{
+	display:inline-block;
+	float: right;
+	width:50%;
+	padding-top:7px;
+}
+.social ul{
+	margin-bottom:0;
+	list-style: none;
+}
+.social ul li{
+	
+	margin-right:2px;
+	
+	padding: 0;
+	display: inline-block;
+	transition:all .2s ease-in-out;
+}
+.social ul li a{
+	color:#fff;
+	opacity: 1;
+}
+
+.social ul .face:hover{
+
+	opacity: .8;
+	
+}
+.social ul .twit:hover{
+
+	opacity: .8;
+	
+}
+.social ul .tube:hover{
+
+	opacity: .8;
+	
+}
+.social ul .inst:hover{
+
+	opacity: .8;
+	
+}
+.social ul .google:hover{
+
+	opacity: .8;
+	
+}
+/*===================================       End Footer        =======================================*/
+/*=================================== Start Page All Category ===========================================
+====================================================================================================*/
+.rows{
+	margin-bottom: 50px;
+}
+.category{
+	
+/* background: #ddd; */
+	
+border:1px solid #ccc;
+	
+display: inline-block;
+	
+border-radius:10px;
+	
+margin: 20px 20px -6px 30px;
+	
+width: 25.333333%;
+}
+.category h4{
+	text-align: center;
+	background: #0d2d54;
+	margin-top: 0;
+	padding: 5px;
+	border-radius:10px 10px 0 0;
+	height: 50px;
+	line-height: 40px;
+	color: #fff;
+}
+.category .content
+{
+	/* width: 250px; */
+	/* height: 212px; */
+}
+
+.category ul a li{
+	 padding: 5px;
+	 display: table;
+
+}
+
+
+/*=================================== End Page All Category ==========================
+=========================================================================================*/
+/*======================== Start SubCategory Page ==============================*/
+
+.subcategory{
+	background: #376b5f;
+	width: 204px;
+	display: inline-block;
+	padding: 13px;
+	height: 62px;
+	margin:10px;
+	text-align: center;
+	font-size: 25px;
+	margin-top:50px;
+	color: #FFF;
+}
+/*======================== End SubCategory Page ==============================*/
+/*=================================== Start Page Admin Login ================================
+=========================================================================================*/
+.panel{
+	border-radius: 10px;
+	
+}
+.panel .panel-default{
+	border-radius: 10px;
+    border:none;
+}
+.panel .panel-heading{
+	background: #0d2d54;
+	color: #FFF;
+	border-radius:10px 10px 0 0;
+	padding:20px;
+	font-size:18px;
+}
+.panel .panel-body{
+	background: #0d2d54;
+	color: #FFF;
+	border-radius: 0 0 10px 10px;
+	padding: 15px 15px 0 15px;
+}
+#email{
+
+	width:250px;
+    background: #FFF;
+}
+#password ,#password-confirm {
+	width: 250px;
+	background: #FFF;
+}
+/*=================================== End Page Admin Login ===========================================
+====================================================================================================*/
+/*==================================== Start Page Product  ========================================*/
+.product
+{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.product.product-image
+{
+	display: inline-block;
+	padding-top: 0;
+}
+.product .product-image img{
+	width: 300px;
+	height: 350px;
+	transition: all 1s ease-in-out;
+}
+.product .product-image img:hover{
+	transform: scale(1.3);
+}
+
+.product .details
+{
+	display: inline-block;
+	/* border: 3px solid #0d2d54; */
+	width:500px;
+	 border-radius: 7px; 
+	height: 354px;
+	background: #0e2d54;
+}
+.product .details h2{
+    background: #0e2d54;
+    padding: 11px;
+    margin-top: 0;
+    border-radius: 7px;
+    text-align: center;
+    color: #826764;
+}
+.product .details p
+{
+	margin: 14px;
+	background: #ffffff;
+	padding: 14px;
+	font-size: 20px;
+	color: #826764;
+	border-radius: 5px;
+}
+.product .details button
+{
+	margin-top: 11px;
+	width: 250px;
+	padding: 13px;
+	font-size: 18px;
+	
+}
+/*==================================== End Page Product  ========================================*/
+/*==================================== Start Page Register  ========================================*/
+.Sign-in
+{
+	width:440px;
+	border:1px solid #ddd;
+	margin-left: 365px;
+	margin-right: 365px;
+	margin-bottom: 100px;
+}
+.brand h2
+{
+	margin-top: 70px;
+}
+.headings
+{
+	background: #ccc;
+	padding:0;
+}
+.headings .sign
+{
+	display: inline-block;
+	margin-left: 10px;
+	
+}
+.headings .log
+{
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+}
+.Sign-in form
+{
+	padding:20px;
+}
+.ss{
+	display: none;
+}
+.LL
+{
+	display: none;
