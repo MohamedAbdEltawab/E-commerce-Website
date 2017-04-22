@@ -9,48 +9,73 @@ use App\Subcategory;
 
 class CategoriesController extends Controller
 {
-    
+
+
+    // ======= view the page content all categories =======
     public function index()
     {
     	$cat = Category::all();
     	return view('admin.category.allcategories', compact('cat'));
     }
+
+
+    // ======= view the page content form to create new category
     public function create()
     {
     	return view('admin.category.addcat');
     }
-    public function store(Request $request, Category $category)
+
+
+    // ======= Store Main Category ======
+    public function store()
     {
-        $this->validate($request, [
+
+        $this->validate(request(), [
             'name' => 'required|min:3|max:50'
         ]);
-    	$category = new Category;
-    	$category->name = $request->name;
-    	$category->save();
 
+        $category = Category::create(request(['name']));
+      
         return back();
     }
+
+
+    //  ==========  view page Edit Category ==========
     public function edit($id)
     {
     	$category = Category::find($id);
     	return view('admin.category.edit', compact('category'));
     }
-    public function update($id, Category $category, Request $request)
+
+
+    // ============  Upate Edit Category  ===========
+    public function update($id)
+
     {
-    	$categoryupdated = $category->find($id);
-    	$categoryupdated->update($request->all());
+
+    	Category::find($id)->update(request()->all());
+
+    
+
     	return redirect('adminpanel/categories');
     }
 
-    public function destroy($id, Category $category)
+
+    //  ===========  Delete Category  ===============
+    public function destroy($id)
     {
-    	$category = $category->find($id);
-    	$category->delete();
+
+        Category::find($id)->delete();
+
+    	
     	return back();
     }
+
+
+    
     public function read($id, Category $category)
     {
-        $category = $category->find($id);
+        $category = Category::find($id);
         return view('admin.subcategory.index', compact('category'));
 
     }

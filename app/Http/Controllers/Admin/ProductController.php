@@ -10,18 +10,25 @@ use App\Category;
 use Intervention\Image\Facades\Image;
 use Session;
 use App\Cart;
+use App\Subcategory;
 
 class ProductController extends Controller
 {
-    public function store($id, Request $request, Product $product)
+
+    //=============== Store product information in database 
+
+    public function store($id, Request $request)
     {
-        $this->validate($request, [
+
+        $this->validate(request(), [
              'name'        => 'required|min:3|max:25',
              'description' => 'required|max:50',
              'price'       => 'required|numeric',
              'amount'      => 'required|numeric',
              'photo'       => 'required|mimes:jpeg,bmp,png, jpg'
         ]);
+
+       
     	$product = new Product;
     	$product->subcategory_id = $id;
     	$product->name = $request->name;
@@ -39,19 +46,21 @@ class ProductController extends Controller
             $product->photo = $filename;
         }
         
-
-
-
     	//dd($request);
     	$product->save();
 
         return back();
     }
+
+
     public function edit($id)
     {
     	$product = Product::find($id);
     	return view('admin.products.edit', compact('product'));
     }
+
+
+    //===================== Update product information 
     public function update($id, Request $request, Product $product)
     {
     	$productupdate = Product::find($id);
@@ -73,6 +82,7 @@ class ProductController extends Controller
     	$productupdate->update($request->all());
     	return back();
     }
+
 
     public function destroy($id)
     {

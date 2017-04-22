@@ -12,25 +12,37 @@ use App\Http\Controllers\Redirect;
 
 class UsersController extends Controller
 {
+
+    //========= view all users ============ 
+
     public function index()
     {
     	$user = User::all();
     	return view('admin.users.index', compact('user'));
     }
+
+    //========= view page add user ========
+
     public function create()
     {
     	return view('admin.users.add');
     }
 
+
+    //=============== store user information in database
+
     public function store(AddUserRequestAdmin $request, User $user)
     {
-    	 $user->create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
+    	 User::create([
+            'name' => request('name'),
+            'email' => request('email'),
+            'password' => bcrypt(request('password')),
         ]);
-    	 return redirect('adminpanel/users'.$user->id)->withFlashMessage('User Has Been Added Successfully');
+
+    	 return redirect('adminpanel/users'.$user->id);
     }
+
+    //============ view page Edit user ==========
 
     public function edit($id)
     {
@@ -38,19 +50,26 @@ class UsersController extends Controller
     	$user = User::find($id);
     	return view('admin.users.edit', compact('user'));
     }
-    public function update($id, User $user, Request $request)
+
+
+    // ============== Update user information =========
+
+    public function update($id)
     {
     	   
-    	$userupdated = $user->find($id);
-    	$userupdated->update($request->all());
-    	return redirect('/adminpanel/users/')->withFlashMessage('Updated Done Successfully');
+    	User::find($id)->update(request()->all());
+    	
+    	return redirect('/adminpanel/users/');
     }
 
 
-    public function destroy($id, User $user)
+    // =========== Delete User =======================
+
+    public function destroy($id)
     {
-    	$user = $user->find($id);
-    	$user->delete();
+
+    	User::find($id)->delete();
+    	
     	return back();
     }
 

@@ -9,17 +9,17 @@ use App\Contact;
 
 class ContactController extends Controller
 {
-    public function store(Request $request)
-    {
-        
-    	$add = new Contact;
-    	$add->name = $request->name;
-    	$add->email = $request->email;
-    	$add->message = $request->message;
 
-    	$add->save();
+
+    public function store()
+
+    {
+        Contact::create(request(['name', 'email', 'message']))->save();
     	
+
+        session()->flash('message', 'The message has been sent !');
     	return back();
+        
     }
 
     public function showMessage()

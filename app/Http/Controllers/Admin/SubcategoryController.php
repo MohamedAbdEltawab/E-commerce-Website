@@ -11,36 +11,53 @@ use App\Category;
 
 class SubcategoryController extends Controller
 {
-    public function store($id, Request $request, Subcat $subcat)
+
+
+    //========== store Subcategory =============
+    
+    public function store($id)
+
     {
-        $this->validate($request, [
+
+        $this->validate(request(), [
             'name' => 'required|min:3|max:50'
         ]);
-    	$subcat = new Subcat;
 
-    	$subcat->name = $request->name;
+        Subcat::create([
 
-    	$subcat->category_id = $id;
-    	$subcat->save();
+            'name'          => request('name'),
+            'category_id'   => $id
+
+            ]);
 
         return back();
     }
+
+
+    //========= view page Edit Subcategory ============
+
     public function edit($id)
     {
+
     	$subcategory = Subcat::find($id);
     	return view('admin.subcategory.edit', compact('subcategory'));
+
     }
-    public function update($id, Request $request, Subcat $subcat)
+
+    //========= Update Subcategory ============
+
+    public function update($id, Request $request)
     {
-    	$subcatupdated = $subcat->find($id);
-    	$subcatupdated->update($request->all());
+    	Subcat::find($id)->update($request->all());
+    
     	return back();
     }
 
+    //========= Delete Subcategory =========
 
-    public function destroy($id, Subcat $subcat)
+    public function destroy($id)
     {
-    	$subact = Subcat::find($id)->delete();
+    	Subcat::find($id)->delete();
     	return back();
     }
 

@@ -1,12 +1,10 @@
-@extends('layouts.app')
-
-@section('title')
+<?php $__env->startSection('title'); ?>
 
    Contact Us
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <style type="text/css">
 body{
@@ -28,17 +26,19 @@ body{
 
   			<h1 class="text-center">Contact Us</h1>
 
-            @if($flash = session('message'))
+            <?php if($flash = session('message')): ?>
 
             <div class="alert alert-info" role="alert">
                 
-                    {{ $flash }}
+                    <?php echo e($flash); ?>
+
             </div>
 
-            @endif
+            <?php endif; ?>
 
-        <form action="{{url('/message')}}" method="POST" >
-         {{ csrf_field() }}
+        <form action="<?php echo e(url('/message')); ?>" method="POST" >
+         <?php echo e(csrf_field()); ?>
+
             <div class="form-group">
                 <input type="text" name="name" placeholder="Name" class="form-control" style="color:#FFF;background: rgba(3, 35, 76, 0.95); ">
             </div>
@@ -63,17 +63,18 @@ body{
 
                 <h3>our address</h3>
 
-                <p>{{getSetting('Address')}}</p>
+                <p><?php echo e(getSetting('Address')); ?></p>
                 
             </div>
 
             <div class="call">
                 <h3>Call Us</h3>
-                <p>Tel    : {{getSetting('Telephone')}}</p>
+                <p>Tel    : <?php echo e(getSetting('Telephone')); ?></p>
                 
             </div>
 
         </div>
     </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
